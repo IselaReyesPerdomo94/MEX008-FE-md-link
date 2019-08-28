@@ -1,4 +1,34 @@
 {
-  "name": "md-links",
-  "version": "0.1.0"
+    "name": "md-links-irp",
+    "version": "0.1.2",
+    "scripts": {
+        "tests": "jest --coverage"
+    },
+    "description": "## Índice",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "dependencies": {
+        "jest": "^24.9.0",
+        "markdown-it": "^9.1.0"
+    },
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/IselaReyesPerdomo94/MEX008-FE-md-link.git"
+    },
+    "keywords": [
+        "markdown",
+        "library"
+    ],
+    "author": "Isela Reyes Perdomo",
+    "license": "ISC",
+    "bin": {
+        "mdlinksirp": "cli.js"
+    },
+    "bugs": {
+        "url": "https://github.com/IselaReyesPerdomo94/MEX008-FE-md-link/issues"
+    },
+    "homepage": "https://github.com/IselaReyesPerdomo94/MEX008-FE-md-link#readme"
 }
