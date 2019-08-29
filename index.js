@@ -5,15 +5,13 @@ const markdownIt = require('markdown-it')();
 module.exports = (path) => {
     const pathFile = pathModule.basename(path)
     console.log(pathFile)
-    fs.readFile(path, (err, data) => {
+    fs.readFile(path, 'utf-8', (err, data) => {
         if (!err) {
-            const dataStr = data.toString();
-            const tokens = markdownIt.parse(dataStr, {})
+
+            const tokens = markdownIt.parse(data, {})
             console.log(tokens[1])
         }
         if (err) throw err;
         console.log(data)
     })
-
-
 };
