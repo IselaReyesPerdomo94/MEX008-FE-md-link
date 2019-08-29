@@ -97,7 +97,9 @@ Isela Reyes Perdomo
 - [ ] Test que ejecute la función con dos parametros (path y stats).
 
 #### file.js
-
+- [] Test que cheque que es una función.
+- [] Test que revise que lo que retorna es una string.
+#### md.js
 
 ## Otros recursos
 
