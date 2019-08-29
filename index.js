@@ -1,17 +1,12 @@
 const pathModule = require('path');
 const fs = require('fs');
 const markdownIt = require('markdown-it')();
+const isMarkdown = require('./lib/md.js');
 
 module.exports = (path) => {
-    const pathFile = pathModule.basename(path)
-    console.log(pathFile)
-    fs.readFile(path, 'utf-8', (err, data) => {
-        if (!err) {
+    if(isMarkdown(path) === false){
+        return `No se encontró archivo MD`;
+    }
 
-            const tokens = markdownIt.parse(data, {})
-            console.log(tokens[1])
-        }
-        if (err) throw err;
-        console.log(data)
-    })
+    
 };
