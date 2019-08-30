@@ -83,9 +83,9 @@ Isela Reyes Perdomo
 
 ### Crear módulos
 - [x] Un archivo index.js que será el encargado de llamar a las funciones necesarias para realizar las actividades que retornen el resultado esperado.
-- [ ] Un archivo stats.js que se encargará de realizar las estadísticas de los links.
-- [ ] Un archivo validate.js que se encargará de revisar que los links si te redirijan a algún lugar.
-- [ ] Un archivo extra por si necesita.
+- [x] Un archivo stats.js que se encargará de realizar las estadísticas de los links.
+- [x] Un archivo validate.js que se encargará de revisar que los links si te redirijan a algún lugar.
+- [x] Un archivo md.js que se dedique solo a saber si un archivo es markdown o no.
 
 ### Crear test
 
@@ -97,9 +97,13 @@ Isela Reyes Perdomo
 - [ ] Test que ejecute la función con dos parametros (path y stats).
 
 #### file.js
-- [] Test que cheque que es una función.
+- [x] Test que cheque que es una función.
 - [] Test que revise que lo que retorna es una string.
 #### md.js
+- [x] Test que cheque que si sea una función.
+- [x] Test que ejecute la función recibiendo archivo md.
+- [x] Test que ejecute la función recibiendo archivo txt.
+
 
 ## Otros recursos
 
