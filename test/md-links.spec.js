@@ -1,5 +1,6 @@
 const mdLinks = require('../index.js');
 const isMarkdown = require('../lib/md.js');
+const readFile = require('../lib/readfile.js');
 
 //Función principal
 describe('mdLinks', () => {
