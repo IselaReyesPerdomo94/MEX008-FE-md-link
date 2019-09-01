@@ -86,24 +86,47 @@ Isela Reyes Perdomo
 - [x] Un archivo stats.js que se encargará de realizar las estadísticas de los links.
 - [x] Un archivo validate.js que se encargará de revisar que los links si te redirijan a algún lugar.
 - [x] Un archivo md.js que se dedique solo a saber si un archivo es markdown o no.
+- [x] Un archivo readfile.js que lea el archivo y retorne un string que analizar.
+- [x] Un archivo analize.js que analice el string y filtre los links.
 
 ### Crear test
 
 #### index.js
 - [x] Test que cheque que si sea una función.
 - [ ] Test que ejecute la función pero que no reciba parámetros (¿qué pasa?)
+- [x] Test que retorna algo si recibe una ruta sin archivo MD.
 - [ ] Test que ejecute la función con un solo parámetro.
 - [ ] Test que ejecute la función con dos parametros (path y validate).
 - [ ] Test que ejecute la función con dos parametros (path y stats).
 
-#### file.js
+#### readfile.js
 - [x] Test que cheque que es una función.
 - [] Test que revise que lo que retorna es una string.
+
 #### md.js
 - [x] Test que cheque que si sea una función.
-- [x] Test que ejecute la función recibiendo archivo md.
-- [x] Test que ejecute la función recibiendo archivo txt.
+- [x] Test que ejecute la función recibiendo archivo md y retorne true.
+- [x] Test que ejecute la función recibiendo archivo txt y retorne false.
 
+#### analize.js
+- [] Test que revisa que pasa si recibe un archivo sin links.
+- [] Test que revisa que pasa si recibe un archivo con puros links.
+- [] Test que revisa que pasa si recibe un archivo con links y texto variado.
+- [] Test que revisa que pasa si recibe un archivo con links y retorna un arreglo de objetos, donde cada objeto es un link con su href, text y path.
+
+#### validate.js
+- [] Test que pase un arreglo de links no rotos revisar su retorno de ok.
+- [] Test que pase un arreglo de links rotos y no rotos, revisar que su retorno sea ok o fail.
+- [] Test que pase un arreglo de links rotos revisar que su retorno sea fail.
+
+#### stats.js
+- [] Test que pase un arreglo de links no rotos revisar y que regrese el total de los links.
+- [] Test que pase un arreglo de links rotos y no rotos que regrese el total de los links de c/u.
+- [] Test que pase un arreglo de links rotos y que regrese el total de los links rotos.
+
+### Diagrama de flujo del programa mdlinksirp
+
+![Diagrama de flujo]()
 
 ## Otros recursos
 
