@@ -31,10 +31,16 @@ describe('readFile', () => {
     it('should be a function', () => {
         expect(typeof readFile).toBe('function');
     });
-    /*it('if is MD, should return true', () => {
-      expect(isMarkdown('../mockfiles/prueba.md')).toBe(true);
+    it('should return string', () => {
+        return readFile('./mockfiles/prueba.md').then(value => {
+            expect(typeof value).toBe("string");
+        })
     });
-    it('if is not MD, should return false', () => {
-      expect(isMarkdown('../mockfiles/text.txt')).toBe(false);
-    });*/
+    it('if file does not exists should, return an Error', () => {
+        return readFile('./mockfiles/prueba2.md').catch(error => {
+            expect(error).toBe("ENOENT: no such file or directory, open 'C:\\Users\\Isela Reyes\\Documents\\Prog Básica\\Laboratoria\\mdlinks\\MEX008-FE-md-link\\mockfiles\\prueba2.md'")
+        })
+    });
 });
+
+//Función analize
