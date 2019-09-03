@@ -1,6 +1,10 @@
 const mdLinks = require('../index.js');
 const isMarkdown = require('../lib/md.js');
 const readFile = require('../lib/readfile.js');
+const analize = require('../lib/analize.js');;
+
+const MOCKMD = '# Prueba de mdlinksirp [github](https://github.com)'; //1 solo link
+const MOCKMDLINKS = '# Todo va a estar bien, [github](https://github.com), [google](https://google.com)'
 
 //Función principal
 describe('mdLinks', () => {
@@ -44,3 +48,17 @@ describe('readFile', () => {
 });
 
 //Función analize
+describe('analize', () => {
+    it('should be a function', () => {
+        expect(typeof analize).toBe('function');
+    });
+    it('should return an empty array if receives an empty file or without links', () => {
+        expect(analize('Hello', './mockfiles/mdvacio.md')).toEqual([]);
+    });
+    it('should return 1 when analize, receives a file with just one link', () => {
+        expect(analize(MOCKMD, './mockfiles/prueba.md').length).toBe(1)
+    });
+    it('should return 2 when analize receives a file that has text and two links', () => {
+        expect(analize(MOCKMDLINKS, './mockfiles/linksandtext.md').length).toBe(2)
+    });
+});
