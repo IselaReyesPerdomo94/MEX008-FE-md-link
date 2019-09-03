@@ -1,7 +1,7 @@
 const mdLinks = require('../index.js');
 const isMarkdown = require('../lib/md.js');
 const readFile = require('../lib/readfile.js');
-const analize = require('../lib/analize.js');;
+const analize = require('../lib/analize.js');
 
 const MOCKMD = '# Prueba de mdlinksirp [github](https://github.com)'; //1 solo link
 const MOCKMDLINKS = '# Todo va a estar bien, [github](https://github.com), [google](https://google.com)'

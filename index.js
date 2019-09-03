@@ -1,24 +1,28 @@
-//const markdownIt = require('markdown-it')();
 const isMarkdown = require('./lib/md.js');
 const readFile = require('./lib/readfile.js');
 const analize = require('./lib/analize.js');
+const limitArgsCli = require('./lib/args.js')
 
-
-module.exports = path => {
-    const finalPath = process.argv[2] || path;
-    const option1 = process.argv[3]
-    if (isMarkdown(finalPath) === false) {
+module.exports = (path, options) => {
+    if (path == null) {
+        console.log('Necesitas agregar una ruta a un archivo MD');
+        return `Necesitas agregar una ruta a un archivo MD`;
+    }
+    if (isMarkdown(path) === false) {
         console.log('No se encontró archivo MD')
         return `No se encontró archivo MD`;
     }
-        readFile(finalPath)
+    // if (path != null && options == null) {
+    readFile(path)
         .then(data => {
             if (data === '') {
                 console.log('El archivo esta vacío')
                 return `El archivo esta vacío`;
             }
-            analize(data, finalPath)
-            
+            const linksWithoutOptions = analize(data, path)
+            console.log(linksWithoutOptions)
         })
         .catch(error => console.log(error))
+
+
 };
