@@ -11,14 +11,14 @@ module.exports = path => {
         console.log('No se encontró archivo MD')
         return `No se encontró archivo MD`;
     }
-    const textInFile = readFile(finalPath);
-    textInFile
+        readFile(finalPath)
         .then(data => {
             if (data === '') {
                 console.log('El archivo esta vacío')
                 return `El archivo esta vacío`;
             }
             analize(data, finalPath)
+            
         })
         .catch(error => console.log(error))
 };

@@ -101,7 +101,7 @@ Isela Reyes Perdomo
 
 #### readfile.js
 - [x] Test que cheque que es una función.
-- [] Test que revise que lo que retorna es una string.
+- [ ] Test que revise que lo que retorna es una string.
 
 #### md.js
 - [x] Test que cheque que si sea una función.
@@ -109,20 +109,20 @@ Isela Reyes Perdomo
 - [x] Test que ejecute la función recibiendo archivo txt y retorne false.
 
 #### analize.js
-- [] Test que revisa que pasa si recibe un archivo sin links.
-- [] Test que revisa que pasa si recibe un archivo con puros links.
-- [] Test que revisa que pasa si recibe un archivo con links y texto variado.
-- [] Test que revisa que pasa si recibe un archivo con links y retorna un arreglo de objetos, donde cada objeto es un link con su href, text y path.
+- [x] Test que revise que analize sea una función.
+- [x] Test que revisa que pasa si recibe un archivo sin links.
+- [x] Test que revisa que pasa si recibe un archivo con puros links.
+- [x] Test que revisa que pasa si recibe un archivo con links y texto variado.
 
 #### validate.js
-- [] Test que pase un arreglo de links no rotos revisar su retorno de ok.
-- [] Test que pase un arreglo de links rotos y no rotos, revisar que su retorno sea ok o fail.
-- [] Test que pase un arreglo de links rotos revisar que su retorno sea fail.
+- [ ] Test que pase un arreglo de links no rotos revisar su retorno de ok.
+- [ ] Test que pase un arreglo de links rotos y no rotos, revisar que su retorno sea ok o fail.
+- [ ] Test que pase un arreglo de links rotos revisar que su retorno sea fail.
 
 #### stats.js
-- [] Test que pase un arreglo de links no rotos revisar y que regrese el total de los links.
-- [] Test que pase un arreglo de links rotos y no rotos que regrese el total de los links de c/u.
-- [] Test que pase un arreglo de links rotos y que regrese el total de los links rotos.
+- [ ] Test que pase un arreglo de links no rotos revisar y que regrese el total de los links.
+- [ ] Test que pase un arreglo de links rotos y no rotos que regrese el total de los links de c/u.
+- [ ] Test que pase un arreglo de links rotos y que regrese el total de los links rotos.
 
 ### Diagrama de flujo del programa mdlinksirp
 
