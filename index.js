@@ -5,13 +5,14 @@ const limitArgsCli = require('./lib/args.js')
 
 module.exports = (path, options) => {
     if (path == null) {
-        console.log('Necesitas agregar una ruta a un archivo MD')
-        return;
+        console.log('Necesitas agregar una ruta a un archivo MD');
+        return `Necesitas agregar una ruta a un archivo MD`;
     }
     if (isMarkdown(path) === false) {
         console.log('No se encontró archivo MD')
         return `No se encontró archivo MD`;
     }
+    // if (path != null && options == null) {
     readFile(path)
         .then(data => {
             if (data === '') {
@@ -22,4 +23,6 @@ module.exports = (path, options) => {
             console.log(linksWithoutOptions)
         })
         .catch(error => console.log(error))
+
+
 };
