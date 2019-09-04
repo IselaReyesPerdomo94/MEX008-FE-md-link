@@ -1,6 +1,6 @@
 {
     "name": "md-links-irp",
-    "version": "0.2.7",
+    "version": "0.3.0",
     "scripts": {
         "tests": "jest --coverage"
     },
