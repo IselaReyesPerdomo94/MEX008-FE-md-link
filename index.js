@@ -12,17 +12,18 @@ module.exports = (path, options) => {
         console.log('No se encontró archivo MD')
         return `No se encontró archivo MD`;
     }
-    // if (path != null && options == null) {
-    readFile(path)
-        .then(data => {
-            if (data === '') {
-                console.log('El archivo esta vacío')
-                return `El archivo esta vacío`;
-            }
-            const linksWithoutOptions = analize(data, path)
-            console.log(linksWithoutOptions)
-        })
-        .catch(error => console.log(error))
-
+    if (path != null && { validate: null, stats: null }) {
+        return readFile(path)
+            .then(data => {
+                if (data === '') {
+                    console.log('El archivo esta vacío')
+                    return `El archivo esta vacío`;
+                }
+                const linksWithoutOptions = analize(data, path)
+                console.log(linksWithoutOptions)
+                return linksWithoutOptions;
+            })
+            .catch(error => console.log(error))
+    }
 
 };
