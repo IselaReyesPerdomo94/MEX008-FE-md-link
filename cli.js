@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 const [A, B, ...args] = process.argv;
-console.log('Estos son los argumentos')
-console.log(args)
+
 const finalPath = process.argv[2] || null;
 const validate = process.argv[3] || process.argv[4];
 const stats = process.argv[3] || process.argv[4];
