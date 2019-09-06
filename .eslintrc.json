@@ -14,12 +14,10 @@
     },
     "rules": {
         "indent": [
-            "error",
-            "tab"
+            "error"
         ],
         "linebreak-style": [
-            "error",
-            "windows"
+            "error"
         ],
         "quotes": [
             "error",

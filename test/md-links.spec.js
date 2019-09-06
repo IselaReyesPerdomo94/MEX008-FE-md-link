@@ -7,9 +7,9 @@ const stats = require('../lib/stats.js');
 const MOCKMD = '# Prueba de mdlinksirp [github](https://github.com)'; //1 solo link
 const MOCKMDLINKS = '# Todo va a estar bien, [github](https://github.com), [google](https://google.com)';
 const MOCKARRAYFORSTATS = [
-    {href: 'https://github.com', text: 'Controlador de versiones', path: '/README.md'},
-    {href: 'https://github.com', text: 'Github', path: '/README.md'}, 
-    {href: 'https://google.com', text: 'Google es el mejor', path: '/README.md'}
+    { href: 'https://github.com', text: 'Controlador de versiones', path: '/README.md' },
+    { href: 'https://github.com', text: 'Github', path: '/README.md' },
+    { href: 'https://google.com', text: 'Google es el mejor', path: '/README.md' }
 ];
 
 //Principal function
@@ -18,19 +18,21 @@ describe('mdLinks', () => {
         expect(typeof mdLinks).toBe('function');
     });
     it('should console log a message if did not find a md file', () => {
-        expect(mdLinks('../mockfiles/text.txt', {validate: null, stats:null})).toBe('No se encontró archivo MD');
+        expect(mdLinks('../mockfiles/text.txt', { validate: null, stats: null })).toBe('No se encontró archivo MD');
     });
     it('should log a message if user did not pass a route', () => {
-        expect(mdLinks(null, {validate: null, stats:null})).toBe('Necesitas agregar una ruta a un archivo MD');
+        expect(mdLinks(null, { validate: null, stats: null })).toBe('Necesitas agregar una ruta a un archivo MD');
     });
     it('should log a message if user pass an empty md file', () => {
-        expect(mdLinks('./mockfiles/mdvacio.md', {validate: null, stats:null})).resolves.toBe('El archivo esta vacío');
+        expect(mdLinks('./mockfiles/mdvacio.md', { validate: null, stats: null })).resolves.toBe('El archivo esta vacío');
     });
 
     it('should log an array if user pass a route to a MD file', () => {
-        expect(mdLinks('./mockfiles/prueba.md', {validate: null, stats:null})).resolves.toEqual([{ href: 'https://github.com',
-        text: 'github',
-        path: './mockfiles/prueba.md' }]);
+        expect(mdLinks('./mockfiles/prueba.md', { validate: null, stats: null })).resolves.toEqual([{
+            href: 'https://github.com',
+            text: 'github',
+            path: './mockfiles/prueba.md'
+        }]);
     });
 });
 
@@ -54,12 +56,12 @@ describe('readFile', () => {
     });
     it('should return string', () => {
         return readFile('./mockfiles/prueba.md').then(value => {
-            expect(typeof value).toBe("string");
+            expect(typeof value).toBe('string');
         });
     });
     it('if file does not exists should, return an Error', () => {
         return readFile('./mockfiles/prueba2.md').catch(error => {
-            expect(error).toBe("ENOENT: no such file or directory, open 'C:\\Users\\Isela Reyes\\Documents\\Prog Básica\\Laboratoria\\mdlinks\\MEX008-FE-md-link\\mockfiles\\prueba2.md'");
+            expect(error).toBe('ENOENT: no such file or directory, open \'C:\\Users\\Isela Reyes\\Documents\\Prog Básica\\Laboratoria\\mdlinks\\MEX008-FE-md-link\\mockfiles\\prueba2.md\'');
         });
     });
 });
@@ -86,6 +88,6 @@ describe('stats', () => {
         expect(typeof stats).toBe('function');
     });
     it('should return the total of links and total of unique links too', () => {
-        expect(stats(MOCKARRAYFORSTATS)).toBe(`Total: 3 \nUnique: 2`);
+        expect(stats(MOCKARRAYFORSTATS)).toBe('Total: 3 \nUnique: 2.');
     });
 });
