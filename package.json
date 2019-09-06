@@ -2,7 +2,8 @@
     "name": "md-links-irp",
     "version": "0.3.0",
     "scripts": {
-        "tests": "jest --coverage"
+        "tests": "eslint . && jest --coverage",
+        "eslint": "eslint --ext .js lib/ test/ MEX008-FE-MD-LINK"
     },
     "description": "## Índice",
     "main": "index.js",
@@ -12,9 +13,17 @@
     "dependencies": {
         "@types/jest": "^24.0.18",
         "jest": "^24.9.0",
-        "markdown-it": "^9.1.0"
+        "markdown-it": "^9.1.0",
+        "node-fetch": "^2.6.0"
     },
-    "devDependencies": {},
+    "devDependencies": {
+        "eslint": "^6.3.0",
+        "eslint-config-standard": "^14.1.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-node": "^10.0.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.1"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/IselaReyesPerdomo94/MEX008-FE-md-link.git"

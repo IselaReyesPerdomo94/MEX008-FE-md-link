@@ -10,7 +10,7 @@ const MOCKARRAYFORSTATS = [
     {href: 'https://github.com', text: 'Controlador de versiones', path: '/README.md'},
     {href: 'https://github.com', text: 'Github', path: '/README.md'}, 
     {href: 'https://google.com', text: 'Google es el mejor', path: '/README.md'}
-]
+];
 
 //Principal function
 describe('mdLinks', () => {
@@ -55,12 +55,12 @@ describe('readFile', () => {
     it('should return string', () => {
         return readFile('./mockfiles/prueba.md').then(value => {
             expect(typeof value).toBe("string");
-        })
+        });
     });
     it('if file does not exists should, return an Error', () => {
         return readFile('./mockfiles/prueba2.md').catch(error => {
-            expect(error).toBe("ENOENT: no such file or directory, open 'C:\\Users\\Isela Reyes\\Documents\\Prog Básica\\Laboratoria\\mdlinks\\MEX008-FE-md-link\\mockfiles\\prueba2.md'")
-        })
+            expect(error).toBe("ENOENT: no such file or directory, open 'C:\\Users\\Isela Reyes\\Documents\\Prog Básica\\Laboratoria\\mdlinks\\MEX008-FE-md-link\\mockfiles\\prueba2.md'");
+        });
     });
 });
 
@@ -73,10 +73,10 @@ describe('analize', () => {
         expect(analize('Hello', './mockfiles/mdvacio.md')).toEqual([]);
     });
     it('should return 1 when analize, receives a file with just one link', () => {
-        expect(analize(MOCKMD, './mockfiles/prueba.md').length).toBe(1)
+        expect(analize(MOCKMD, './mockfiles/prueba.md').length).toBe(1);
     });
     it('should return 2 when analize receives a file that has text and two links', () => {
-        expect(analize(MOCKMDLINKS, './mockfiles/linksandtext.md').length).toBe(2)
+        expect(analize(MOCKMDLINKS, './mockfiles/linksandtext.md').length).toBe(2);
     });
 });
 
