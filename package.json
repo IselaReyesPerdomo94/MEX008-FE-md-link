@@ -1,6 +1,6 @@
 {
     "name": "md-links-irp",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "scripts": {
         "tests": "eslint . && jest --coverage",
         "eslint": "eslint --ext .js lib/ test/ MEX008-FE-MD-LINK"
