@@ -115,14 +115,14 @@ Isela Reyes Perdomo
 - [x] Test que revisa que pasa si recibe un archivo con links y texto variado.
 
 #### validate.js
-- [ ] Test que pase un arreglo de links no rotos revisar su retorno de ok.
-- [ ] Test que pase un arreglo de links rotos y no rotos, revisar que su retorno sea ok o fail.
-- [ ] Test que pase un arreglo de links rotos revisar que su retorno sea fail.
+- [x] Test que pase un arreglo de links no rotos revisar su retorno de ok.
+- [x] Test que pase un arreglo de links rotos y no rotos, revisar que su retorno sea ok o fail.
+- [x] Test que pase un arreglo de links rotos revisar que su retorno sea fail.
 
 #### stats.js
-- [ ] Test que pase un arreglo de links no rotos revisar y que regrese el total de los links.
-- [ ] Test que pase un arreglo de links rotos y no rotos que regrese el total de los links de c/u.
-- [ ] Test que pase un arreglo de links rotos y que regrese el total de los links rotos.
+- [x] Test que pase un arreglo de links no rotos revisar y que regrese el total de los links.
+- [x] Test que pase un arreglo de links rotos y no rotos que regrese el total de los links de c/u.
+- [x] Test que pase un arreglo de links rotos y que regrese el total de los links rotos.
 
 ### Diagrama de flujo del programa mdlinksirp
 
@@ -133,3 +133,4 @@ Isela Reyes Perdomo
 Como veras, md-links-irp utiliza una librería llamada Marckdown it, para detectar los links del archivo MD.
 Por lo que si te gustaría conocer más sobre sus metódos o su [documentación](https://markdown-it.github.io/markdown-it/) para utilizarlo en tus proyectos puedes visitar el repositorio [aquí](https://github.com/markdown-it/markdown-it).
 
+También utilicé la librería [colors](https://www.npmjs.com/package/colors/v/1.3.3). Para personalizar los mensajes y evitar un gris que puede ser repetitivo.
