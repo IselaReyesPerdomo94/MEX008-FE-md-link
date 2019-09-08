@@ -93,15 +93,16 @@ Isela Reyes Perdomo
 
 #### index.js
 - [x] Test que cheque que si sea una función.
-- [ ] Test que ejecute la función pero que no reciba parámetros (¿qué pasa?)
+- [x] Test que ejecute la función pero que no reciba parámetros (¿qué pasa?)
 - [x] Test que retorna algo si recibe una ruta sin archivo MD.
-- [ ] Test que ejecute la función con un solo parámetro.
-- [ ] Test que ejecute la función con dos parametros (path y validate).
-- [ ] Test que ejecute la función con dos parametros (path y stats).
+- [x] Test que ejecute la función con un solo parámetro.
+- [x] Test que ejecute la función con dos parametros (path y validate).
+- [x] Test que ejecute la función con dos parametros (path y stats).
 
 #### readfile.js
 - [x] Test que cheque que es una función.
-- [ ] Test que revise que lo que retorna es una string.
+- [x] Test que revise que lo que retorna es una string.
+- [x] Se agregaron más tests.
 
 #### md.js
 - [x] Test que cheque que si sea una función.
@@ -134,3 +135,7 @@ Como veras, md-links-irp utiliza una librería llamada Marckdown it, para detect
 Por lo que si te gustaría conocer más sobre sus metódos o su [documentación](https://markdown-it.github.io/markdown-it/) para utilizarlo en tus proyectos puedes visitar el repositorio [aquí](https://github.com/markdown-it/markdown-it).
 
 También utilicé la librería [colors](https://www.npmjs.com/package/colors/v/1.3.3). Para personalizar los mensajes y evitar un gris que puede ser repetitivo.
+
+## Agradecimientos
+
+A Lizzie, Silvana, John e Ivan de Laboratoria por ayudarme con situaciones complejas en el desarrollo del proyecto. Se los agradezco mucho.

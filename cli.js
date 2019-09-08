@@ -12,11 +12,11 @@ if(!limitArgsCli(process.argv)){
 
 //Evaluating if user puts one argument and is not one permitted flag.
 if(process.argv.length === 4){    
- if(process.argv[3] !== '--stats' && process.argv[3] !== '--validate') {
-    console.log(colors.green('Las banderas validas son:'));    
-    console.log(colors.yellow('--stats\n--validate'));
-    return;
- }
+    if(process.argv[3] !== '--stats' && process.argv[3] !== '--validate') {
+        console.log(colors.green('Las banderas validas son:'));    
+        console.log(colors.yellow('--stats\n--validate'));
+        return;
+    }
 }
 
 //Evaluating if user puts two arguments and are not permitted flags.
